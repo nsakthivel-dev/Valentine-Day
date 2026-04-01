@@ -1,12 +1,21 @@
 {
+  "version": 2,
   "buildCommand": "pnpm build",
   "outputDirectory": "artifacts/valentine-proposal/dist/public",
-  "framework": "vite",
   "installCommand": "pnpm install",
+  "functions": {
+    "artifacts/api-server/src/index.ts": {
+      "runtime": "vercel-node@latest"
+    }
+  },
   "rewrites": [
     {
+      "source": "/api/(.*)",
+      "destination": "artifacts/api-server/src/index.ts"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/artifacts/valentine-proposal/$1"
+      "destination": "/$1"
     }
   ]
 }
