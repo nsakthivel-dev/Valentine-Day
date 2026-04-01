@@ -4,15 +4,10 @@
   "buildCommand": "pnpm build",
   "outputDirectory": "artifacts/valentine-proposal/dist/public",
   "installCommand": "pnpm install",
-  "functions": {
-    "api/index.ts": {
-      "runtime": "@vercel/node"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "api/index.ts"
+      "destination": "/api/index.ts"
     },
     {
       "source": "/((?!api/).*)",
