@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "framework": null,
   "buildCommand": "pnpm build",
   "outputDirectory": "artifacts/valentine-proposal/dist/public",
   "installCommand": "pnpm install",
