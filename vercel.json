@@ -5,7 +5,7 @@
   "installCommand": "pnpm install",
   "functions": {
     "artifacts/api-server/src/index.ts": {
-      "runtime": "vercel-node@latest"
+      "runtime": "vercel-node@3.1.0"
     }
   },
   "rewrites": [
